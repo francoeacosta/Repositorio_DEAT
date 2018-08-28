@@ -1,0 +1,3 @@
+La linea base se actualizara al final de cada sprint, en cada revisiòn de sprint determinaremos cuales items de configuracion vamos a actualizar. 
+IMPORTANTE: si se quieren consultar cuales fueron las actualizaciones correspondientes en cada sprint, ver el archivo Actualizacion.txt en la carpeta Sprint Backlog
+NOTA: cada entrega de trabajo practico sera considerada como un nuevo Sprint, el primer sprint comenzara el 6/9 (fecha de inicio del Trabajo Practico 6)
