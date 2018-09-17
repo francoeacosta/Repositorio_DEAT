@@ -13,6 +13,7 @@ import java.util.Date;
  * @author Octavio
  */
 public class Tarjeta {
+
     private String num1;
     private String num2;
     private String num3;
@@ -33,7 +34,6 @@ public class Tarjeta {
         this.fechaVencimiento = fechaVencimiento;
     }
 
-    
     public String getNum1() {
         return num1;
     }
@@ -97,12 +97,5 @@ public class Tarjeta {
     public void setFechaVencimiento(LocalDate fechaVencimiento) {
         this.fechaVencimiento = fechaVencimiento;
     }
-    
-    
 
-  
-    
-
-    
-    
 }

@@ -41,38 +41,37 @@ public class FormaDePagoInterfaz implements Initializable {
 
     /**
      * Initializes the controller class.
+     *
      * @param url
      * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-      Image titulo = new Image ("delivereat_owler_20170228_090215_original.png");
-      Image imagen2 = new Image ("mobile01.png");
-      imgTitulo.setImage(titulo);
-      imgview.setImage(imagen2);
-      cmb_pago.getItems().add("Efectivo");
-      cmb_pago.getItems().add("Tarjeta");
-    }    
+        Image titulo = new Image("delivereat_owler_20170228_090215_original.png");
+        Image imagen2 = new Image("mobile01.png");
+        imgTitulo.setImage(titulo);
+        imgview.setImage(imagen2);
+        cmb_pago.getItems().add("Efectivo");
+        cmb_pago.getItems().add("Tarjeta");
+    }
 
     @FXML
     private void handleButtonSiguiente(ActionEvent event) throws IOException {
-       try{
-        if(cmb_pago.getValue().equals(cmb_pago.getItems().get(0))){
-            abrirVentana("PagoEfectivoInterfaz.fxml");
-            g.cerrarVentana(event);
+        try {
+            if (cmb_pago.getValue().equals(cmb_pago.getItems().get(0))) {
+                abrirVentana("PagoEfectivoInterfaz.fxml");
+                g.cerrarVentana(event);
+            } else {
+                abrirVentana("PagoTarjetaInterfaz.fxml");
+                g.cerrarVentana(event);
+            }
+        } catch (RuntimeException ex) {
+            g.generarDialogoError("Seleccione una forma de pago");
         }
-        else{
-           abrirVentana("PagoTarjetaInterfaz.fxml");
-           g.cerrarVentana(event); 
-        }
-       }
-       catch(RuntimeException ex){
-       g.generarDialogoError("Seleccione una forma de pago");
-       }
-        
+
     }
-    
-    private void abrirVentana(String nombreXML) throws IOException{
+
+    private void abrirVentana(String nombreXML) throws IOException {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource(nombreXML));
         Parent root = loader.load();
@@ -80,8 +79,5 @@ public class FormaDePagoInterfaz implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    
-    
-    
-    
+
 }

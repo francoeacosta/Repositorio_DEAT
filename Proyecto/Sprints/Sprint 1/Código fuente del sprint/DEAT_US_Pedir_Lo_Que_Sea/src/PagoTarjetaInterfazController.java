@@ -56,32 +56,31 @@ public class PagoTarjetaInterfazController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-      Image titulo = new Image ("delivereat_owler_20170228_090215_original.png");
-      Image imagen2 = new Image ("mobile01.png");
-      imgTitulo.setImage(titulo);
-      imgview.setImage(imagen2);
-      tarjetasValidas = getTarjetasValidas();
-    }    
+        Image titulo = new Image("delivereat_owler_20170228_090215_original.png");
+        Image imagen2 = new Image("mobile01.png");
+        imgTitulo.setImage(titulo);
+        imgview.setImage(imagen2);
+        tarjetasValidas = getTarjetasValidas();
+    }
 
     @FXML
     private void handleConfirmar(ActionEvent event) {
-        if(validarTarjeta()){
-        g.cerrarVentana(event);
-        g.generarDialogoInformation("Datos de la tarjeta ingresados correctamente");
-        g.generarDialogoInformation("Su pedido va en camino aguarde que nuestro cadete va a su domicilio");
-        g.generarDialogoInformation("Su pedido llegara en 30-45 minutos");
+        if (validarTarjeta()) {
+            g.cerrarVentana(event);
+            g.generarDialogoInformation("Datos de la tarjeta ingresados correctamente");
+            g.generarDialogoInformation("Su pedido va en camino aguarde que nuestro cadete va a su domicilio");
+            g.generarDialogoInformation("Su pedido llegara en 30-45 minutos");
+        } else {
+            g.generarDialogoError("Ingrese una tarjeta valida porfavor");
         }
-            else{
-                g.generarDialogoError("Ingrese una tarjeta valida porfavor");
-            }
     }
 
     public ArrayList<Tarjeta> getTarjetasValidas() {
-        Tarjeta t1 = new Tarjeta("1234","5678", "9123", "4567", "Octavio", "Santi", "3452", LocalDate.of(2020,10,25));
-        Tarjeta t2 = new Tarjeta("5789","9999","8888","1111", "Camila", "Romero", "3453", LocalDate.of(2020,10,28));
-        Tarjeta t3 = new Tarjeta("1111", "2222", "3333", "4444", "Franco", "Acosta", "3454", LocalDate.of(2020,10,29));
-        Tarjeta t4 = new Tarjeta("5555","6666","7777","8888", "Facundo", "Muñoz", "3455", LocalDate.of(2019,10,30));
-        Tarjeta t5 = new Tarjeta("2222","3333","4444","5555", "Lucas", "Garcia", "3456", LocalDate.of(2020,11,27));
+        Tarjeta t1 = new Tarjeta("1234", "5678", "9123", "4567", "Octavio", "Santi", "3452", LocalDate.of(2020, 10, 25));
+        Tarjeta t2 = new Tarjeta("5789", "9999", "8888", "1111", "Camila", "Romero", "3453", LocalDate.of(2020, 10, 28));
+        Tarjeta t3 = new Tarjeta("1111", "2222", "3333", "4444", "Franco", "Acosta", "3454", LocalDate.of(2020, 10, 29));
+        Tarjeta t4 = new Tarjeta("5555", "6666", "7777", "8888", "Facundo", "Muñoz", "3455", LocalDate.of(2019, 10, 30));
+        Tarjeta t5 = new Tarjeta("2222", "3333", "4444", "5555", "Lucas", "Garcia", "3456", LocalDate.of(2020, 11, 27));
         tarjetasValidas.add(t1);
         tarjetasValidas.add(t2);
         tarjetasValidas.add(t3);
@@ -89,17 +88,16 @@ public class PagoTarjetaInterfazController implements Initializable {
         tarjetasValidas.add(t5);
         return tarjetasValidas;
     }
-    
-    public boolean validarTarjeta(){
+
+    public boolean validarTarjeta() {
         for (int i = 0; i < tarjetasValidas.size(); i++) {
-            return txt_num1.getText().equals(tarjetasValidas.get(i).getNum1()) && 
-                    txt_num2.getText().equals(tarjetasValidas.get(i).getNum2()) && txt_num3.getText().equals(tarjetasValidas.get(i).getNum3()) &&
-                    txt_num4.getText().equals(tarjetasValidas.get(i).getNum4()) && txt_nombre.getText().equals(tarjetasValidas.get(i).getNombreTitular()) &&
-                    txt_apellido.getText().equals(tarjetasValidas.get(i).getApellidoTitular()) && txt_codigo.getText().equals(tarjetasValidas.get(i).getCodigoSeguridad()) &&
-                    dtpk_fecha.getValue().equals(tarjetasValidas.get(i).getFechaVencimiento());         
+            return txt_num1.getText().equals(tarjetasValidas.get(i).getNum1())
+                    && txt_num2.getText().equals(tarjetasValidas.get(i).getNum2()) && txt_num3.getText().equals(tarjetasValidas.get(i).getNum3())
+                    && txt_num4.getText().equals(tarjetasValidas.get(i).getNum4()) && txt_nombre.getText().equals(tarjetasValidas.get(i).getNombreTitular())
+                    && txt_apellido.getText().equals(tarjetasValidas.get(i).getApellidoTitular()) && txt_codigo.getText().equals(tarjetasValidas.get(i).getCodigoSeguridad())
+                    && dtpk_fecha.getValue().equals(tarjetasValidas.get(i).getFechaVencimiento());
         }
         return false;
     }
-    
-   
+
 }

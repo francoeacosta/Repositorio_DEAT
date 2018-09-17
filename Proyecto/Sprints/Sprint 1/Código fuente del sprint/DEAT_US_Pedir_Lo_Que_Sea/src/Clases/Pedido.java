@@ -10,13 +10,14 @@ package Clases;
  * @author Octavio
  */
 public class Pedido {
-   private String nombreProducto;
-   private String direccion;
+
+    private String nombreProducto;
+    private String direccion;
 
     public Pedido(String nombreProducto, String direccion) {
         this.nombreProducto = nombreProducto;
         this.direccion = direccion;
-        
+
     }
 
     public String getNombreProducto() {
@@ -34,6 +35,5 @@ public class Pedido {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-    
-    
+
 }
