@@ -1,0 +1,3 @@
+http://hp.fciencias.unam.mx/~alg/normas/estilo.html
+
+Guia de buenas practicas elegida para implementacion del proyecto
