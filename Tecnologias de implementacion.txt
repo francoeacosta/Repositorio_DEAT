@@ -1,0 +1,3 @@
+El proyecto sera implementado en las siguientes tecnologias:
+-Back-end: Java
+-Front-end: Java FX
