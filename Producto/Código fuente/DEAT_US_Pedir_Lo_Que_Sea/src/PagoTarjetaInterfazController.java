@@ -68,8 +68,7 @@ public class PagoTarjetaInterfazController implements Initializable {
         if (validarTarjeta()) {
             g.cerrarVentana(event);
             g.generarDialogoInformation("Datos de la tarjeta ingresados correctamente");
-            g.generarDialogoInformation("Su pedido va en camino aguarde que nuestro cadete va a su domicilio");
-            g.generarDialogoInformation("Su pedido llegara en 30-45 minutos");
+            g.generarDialogoInformation("Su pedido va en camino sera entregado segun lo acordado");
         } else {
             g.generarDialogoError("Ingrese una tarjeta valida porfavor");
         }

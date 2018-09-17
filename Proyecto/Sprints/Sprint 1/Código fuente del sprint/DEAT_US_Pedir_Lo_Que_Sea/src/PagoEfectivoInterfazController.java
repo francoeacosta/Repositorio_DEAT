@@ -49,8 +49,7 @@ public class PagoEfectivoInterfazController implements Initializable {
         if(validarDatos()){
             if(validarNoVacio()){
         g.cerrarVentana(event);
-        g.generarDialogoInformation("Su pedido va en camino aguarde que nuestro cadete va a su domicilio");
-        g.generarDialogoInformation("Su pedido llegara en 30-45 minutos");
+        g.generarDialogoInformation("Su pedido a sido confirmado, sera entregado segun lo acordado");
         }
             else{
                 g.generarDialogoError("Ingrese un monto porfavor");
