@@ -1,0 +1,381 @@
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+
+#divimg {
+    position:relative;
+    text-align:center;
+}
+
+#container {
+    height:100%;
+    position:relative;
+    top: 0px;
+    left: 1px;
+    width: 100%;
+}
+
+#header {
+   background:#fff;
+   padding-top: 30px;
+   padding-bottom: 90px;
+   text-align: center;
+   width:100%;
+}
+
+#body {
+   background:#d82126;
+   padding-top:60px;
+   padding-bottom:30px;   /* Height of the footer */
+   text-align: center;
+   width:100%;
+   min-height: 300px;
+}
+
+#footer 
+{
+    padding: 10px 0px 10px 0px;
+    background: #a00;
+    width: 100%; 
+    color: #ffffff;
+    font-family:Arial;
+    font-size:12px;
+    font-style:normal;    
+}
+
+#footer a
+{   
+    color: #ffffff;
+}
+
+#left {
+    float:left;
+}
+
+#center {
+    display: inline-block;
+    margin:0 auto;
+}
+
+#right {
+    float:right;
+}
+
+
+#imagemain01 { 
+    position:relative;
+    top: -120px;
+} 
+
+#imgpos
+{
+}
+
+#imagemain02 
+{
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    right: 50%;
+    margin-left: -170px
+}
+
+#imagemain { 
+    position:absolute;
+    top: 120px;
+    right: 50%;
+} 
+
+.buttonok {
+    -moz-border-radius: 5px;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: #6E7849 0 0 10px;
+    -webkit-transition: all 0.5s ease;
+    background-color: #ffffff;
+    
+	border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	-moz-border-radius-topright:5px;
+	border-top-right-radius:5px;
+	-webkit-border-bottom-right-radius:5px;
+	-moz-border-radius-bottomright:5px;
+	border-bottom-right-radius:5px;
+	-webkit-border-bottom-left-radius:5px;
+	-moz-border-radius-bottomleft:5px;
+	border-bottom-left-radius:5px;
+    border: 1px solid #ffffff;
+    color: #ff0000;
+    display: inline-block;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    font-style:normal;
+    margin: auto;
+    padding: 5px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.dropdown {
+    display: block;
+    display: inline-block;
+    margin: 0px 3px;
+    position: relative;    
+}
+
+/* ===[ For demonstration ]=== */
+
+.dropdown { margin-top: 10px }
+
+/* ===[ End demonstration ]=== */
+
+.dropdown .dropdown_button {
+    cursor: pointer;
+    width: 200px; 
+    display: inline-block;
+    padding: 4px 5px;
+
+
+    background: white;
+    
+	border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	-moz-border-radius-topright:5px;
+	border-top-right-radius:5px;
+	-webkit-border-bottom-right-radius:5px;
+	-moz-border-radius-bottomright:5px;
+	border-bottom-right-radius:5px;
+	-webkit-border-bottom-left-radius:5px;
+	-moz-border-radius-bottomleft:5px;
+	border-bottom-left-radius:5px;
+	
+    color: #ff0000;
+    display: inline-block;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    font-style:normal;
+    
+    text-align: left;      
+}
+
+.dropdown input[type="checkbox"]:checked +  .dropdown_button {
+    color: #ff0000;
+    background: #ffffff;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.dropdown input[type="checkbox"] + .dropdown_button .arrow {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid #6B7FA7;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    margin-left: 80px;
+}
+
+.dropdown input[type="checkbox"]:checked + .dropdown_button .arrow { border-color: white transparent transparent transparent }
+
+.dropdown .dropdown_content {
+    position: absolute;
+    width: 210px; 
+    
+    padding: 0px;
+    background: white;
+    margin-top: 5px;
+    display: none;
+
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;    
+}
+
+.dropdown .dropdown_content li {
+    list-style: none;
+    margin-left: 5px;
+    line-height: 16px;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    
+    color: #ff0000;
+    display: inline-block;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    font-style:normal;    
+    text-align: left;
+}
+
+/*
+.dropdown .dropdown_content li:hover {
+    border-top-color: #3B5998;
+    border-bottom-color: #3B5998;
+    background: #6D84B4;
+}
+
+.dropdown .dropdown_content li a {
+    display: block;
+    padding: 2px 7px;
+    padding-right: 15px;
+    color: black;
+    text-decoration: none !important;
+    white-space: nowrap;
+}
+
+.dropdown .dropdown_content li:hover a {
+    color: white;
+    text-decoration: none !important;
+}
+*/
+.dropdown input[type="checkbox"]:checked ~ .dropdown_content { display: block }
+
+.dropdown input[type="checkbox"] { display: none }
+
+
+.buttonselect {
+    -moz-border-radius: 5px;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: #6E7849 0 0 10px;
+    -webkit-transition: all 0.5s ease;
+    
+	border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	-moz-border-radius-topright:5px;
+	border-top-right-radius:5px;
+	-webkit-border-bottom-right-radius:5px;
+	-moz-border-radius-bottomright:5px;
+	border-bottom-right-radius:5px;
+	-webkit-border-bottom-left-radius:5px;
+	-moz-border-radius-bottomleft:5px;
+	border-bottom-left-radius:5px;
+    border: 1px solid #ffffff;
+    color: #d82126;
+    display: inline-block;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    font-style:normal;
+    margin: auto;
+    padding: 5px;
+    width: 200px;
+    text-align: left;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    background: #ffffff url(/img/downarrow.png) no-repeat right;
+}
+
+
+.buttoncontinue {
+    -moz-border-radius: 5px;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: #6E7849 0 0 10px;
+    -webkit-transition: all 0.5s ease;
+    
+	border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	-moz-border-radius-topright:5px;
+	border-top-right-radius:5px;
+	-webkit-border-bottom-right-radius:5px;
+	-moz-border-radius-bottomright:5px;
+	border-bottom-right-radius:5px;
+	-webkit-border-bottom-left-radius:5px;
+	-moz-border-radius-bottomleft:5px;
+	border-bottom-left-radius:5px;
+    border: 1px solid #ffffff;
+    color: #d82126;
+    display: inline-block;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    font-style:normal;
+    margin: auto;
+    margin-left: 120px;
+    padding: 5px;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    background: #ffffff;
+}
+
+div#contentwordmobile { padding: 20px; background-color: #d82126; overflow-x: auto; }
+div#search_resultmobile  
+{
+    padding: 10px;
+    background: white; 
+    
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;       
+}
+
+div#search_resultmobile div.searchcuisine  
+{
+    text-align: left;
+    background-color: #fff; 
+    padding-bottom: 5px;        
+
+    color: #d82126;
+    font-family:Arial;
+    font-size: 12px; 
+    font-weight: bold; 
+}
+
+div#search_resultmobile div.searchcuisine table { clear: both; width: 100%; }
+div#search_resultmobile div.searchcuisine table td { padding: 10px; border-bottom: 1px solid #ccc; }
+div#search_resultmobile div.searchcuisine table td.title { width: 90%; }
+div#search_resultmobile div.searchcuisine table td.button { width: 10%; text-align: right; }
+
+.stdfont 
+{
+    color: #000000;
+    font-family:Arial;
+    font-size: 11px; 
+    padding-left:20px;
+}
+
+.rbListWrap {
+    width: 100%;
+}
+
+.rbListWrap tr td {
+    height:20px;
+    vertical-align: middle;  
+    padding: 5px;
+    width: 33%;
+}
+
+.rbListWrap input { 
+    float:right;
+}
+
+.rbListWrap label { 
+    position: relative;
+    padding-left:20px;
+}

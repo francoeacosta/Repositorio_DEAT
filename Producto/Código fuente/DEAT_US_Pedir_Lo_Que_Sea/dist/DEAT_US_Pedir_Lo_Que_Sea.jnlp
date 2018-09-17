@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="DEAT_US_Pedir_Lo_Que_Sea.jnlp">
+  <information>
+    <title>DEAT_US_Pedir_Lo_Que_Sea</title>
+    <vendor>Octavio</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="DEAT_US_Pedir_Lo_Que_Sea.jar" size="220289" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="DEAT_US_Pedir_Lo_Que_Sea" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="Main"  name="DEAT_US_Pedir_Lo_Que_Sea" />
+  <update check="always"/>
+</jnlp>
