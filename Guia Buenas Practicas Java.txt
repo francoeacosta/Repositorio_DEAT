@@ -1,3 +1,4 @@
-http://hp.fciencias.unam.mx/~alg/normas/estilo.html
+Guia de buenas practicas de codigo: http://hp.fciencias.unam.mx/~alg/normas/estilo.html
+Guia de buenas practicas para interfaces de usuario: http://anahuacmayab.mx/designia/?p=1599
 
 Guia de buenas practicas elegida para implementacion del proyecto
