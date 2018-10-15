@@ -29,15 +29,13 @@ import javafx.scene.Scene;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import Soporte.GestorVentanas;
-
+import Persistencia.*;
 /**
  *
  * @author Octavio
  */
 public class FXMLDocumentController implements Initializable {
 
-    @FXML
-    private Label label;
     @FXML
     private TextField txt_domicilio;
     @FXML
@@ -59,6 +57,10 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button btn_ubicacion;
     private GestorVentanas g = new GestorVentanas();
+    @FXML
+    private TextField txt_domEntrega;
+    @FXML
+    private TextField txt_PrecioEstimado;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -73,10 +75,14 @@ public class FXMLDocumentController implements Initializable {
 
     }
 
-    public void tomarDatos() {
+    public void guardarPedido() throws IOException {
         String nombreProducto = txt_Producto.getText();
-        String domicilio = txt_domicilio.getText();
-        Pedido pedido = new Pedido(nombreProducto, domicilio);
+        String domicilioBusqueda = txt_domicilio.getText();
+        String domicilioEntrega = txt_domEntrega.getText();
+        Integer precioEstimado = Integer.parseInt(txt_PrecioEstimado.getText());
+        Pedido pedido = new Pedido(nombreProducto, domicilioBusqueda, domicilioEntrega, precioEstimado);
+        Writer wr = new Writer();
+        wr.write(pedido);
     }
 
     @FXML
@@ -123,6 +129,7 @@ public class FXMLDocumentController implements Initializable {
             stage.show();
             g.generarDialogoInformation("Prosiga a seleccionar una forma de pago");
             g.cerrarVentana(event);
+            guardarPedido();
 
         } else {
             g.generarDialogoError("Ingrese datos validos porfavor");
@@ -130,11 +137,11 @@ public class FXMLDocumentController implements Initializable {
     }
 
     private boolean validarDatos() {
-        return !g.isNumeric(txt_Producto.getText()) && !g.isNumeric(txt_domicilio.getText());
+        return !g.isNumeric(txt_Producto.getText()) && !g.isNumeric(txt_domicilio.getText()) && !g.isNumeric(txt_domEntrega.getText()) && g.isNumeric(txt_PrecioEstimado.getText());
     }
 
     private boolean validarNoVacio() {
-        return !txt_Producto.getText().equals("") && !txt_domicilio.getText().equals("");
+        return !txt_Producto.getText().equals("") && !txt_domicilio.getText().equals("") && !txt_domEntrega.getText().equals("") && !txt_PrecioEstimado.getText().equals("");
     }
 
 }

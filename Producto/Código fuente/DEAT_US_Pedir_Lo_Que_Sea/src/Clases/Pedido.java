@@ -12,28 +12,68 @@ package Clases;
 public class Pedido {
 
     private String nombreProducto;
-    private String direccion;
-
-    public Pedido(String nombreProducto, String direccion) {
-        this.nombreProducto = nombreProducto;
-        this.direccion = direccion;
-
-    }
-
+    private String direccionEntrega;
+    private String direccionBusqueda;
+    private int precioEstimado;
+    private Tarjeta tarjeta;
+    
     public String getNombreProducto() {
         return nombreProducto;
-    }
-
-    public String getDireccion() {
-        return direccion;
     }
 
     public void setNombreProducto(String nombreProducto) {
         this.nombreProducto = nombreProducto;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public String getDireccionEntrega() {
+        return direccionEntrega;
     }
 
+    public void setPrecioEstimado(int precioEstimado) {
+        this.precioEstimado = precioEstimado;
+    }
+
+  
+
+    public void setDireccionEntrega(String direccionEntrega) {
+        this.direccionEntrega = direccionEntrega;
+    }
+
+    public Pedido(String nombreProducto, String direccionEntrega, String direccionBusqueda, int precioEstimado) {
+        this.nombreProducto = nombreProducto;
+        this.direccionEntrega = direccionEntrega;
+        this.direccionBusqueda = direccionBusqueda;
+        this.precioEstimado = precioEstimado;
+    }
+
+    
+   
+
+    public String getDireccionBusqueda() {
+        return direccionBusqueda;
+    }
+
+    public void setDireccionBusqueda(String direccionBusqueda) {
+        this.direccionBusqueda = direccionBusqueda;
+    }
+
+    public int getPrecioEstimado() {
+        return precioEstimado;
+    }
+
+    public Tarjeta getTarjeta() {
+        return tarjeta;
+    }
+
+    public void setTarjeta(Tarjeta tarjeta) {
+        this.tarjeta = tarjeta;
+    }
+
+  
+    
+
+   
+
+   
+  
 }

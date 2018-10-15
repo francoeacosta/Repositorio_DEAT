@@ -70,4 +70,6 @@ public class PagoEfectivoInterfazController implements Initializable {
         return !txt_Pago.getText().equals("") ;
     }
     
+    
+    
 }

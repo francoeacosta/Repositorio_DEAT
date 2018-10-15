@@ -75,11 +75,11 @@ public class PagoTarjetaInterfazController implements Initializable {
     }
 
     public ArrayList<Tarjeta> getTarjetasValidas() {
-        Tarjeta t1 = new Tarjeta("1234", "5678", "9123", "4567", "Octavio", "Santi", "3452", LocalDate.of(2020, 10, 25));
-        Tarjeta t2 = new Tarjeta("5789", "9999", "8888", "1111", "Camila", "Romero", "3453", LocalDate.of(2020, 10, 28));
-        Tarjeta t3 = new Tarjeta("1111", "2222", "3333", "4444", "Franco", "Acosta", "3454", LocalDate.of(2020, 10, 29));
-        Tarjeta t4 = new Tarjeta("5555", "6666", "7777", "8888", "Facundo", "Muñoz", "3455", LocalDate.of(2019, 10, 30));
-        Tarjeta t5 = new Tarjeta("2222", "3333", "4444", "5555", "Lucas", "Garcia", "3456", LocalDate.of(2020, 11, 27));
+        Tarjeta t1 = new Tarjeta("1234", "5678", "9123", "4567", "Octavio", "Santi", "352", LocalDate.of(2020, 10, 25));
+        Tarjeta t2 = new Tarjeta("5789", "9999", "8888", "1111", "Camila", "Romero", "453", LocalDate.of(2020, 10, 28));
+        Tarjeta t3 = new Tarjeta("1111", "2222", "3333", "4444", "Franco", "Acosta", "454", LocalDate.of(2020, 10, 29));
+        Tarjeta t4 = new Tarjeta("5555", "6666", "7777", "8888", "Facundo", "Muñoz", "455", LocalDate.of(2019, 10, 30));
+        Tarjeta t5 = new Tarjeta("2222", "3333", "4444", "5555", "Lucas", "Garcia", "346", LocalDate.of(2020, 11, 27));
         tarjetasValidas.add(t1);
         tarjetasValidas.add(t2);
         tarjetasValidas.add(t3);
